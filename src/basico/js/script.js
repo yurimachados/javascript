@@ -1,4 +1,4 @@
-function calcularMedia( notas ) {
+const calcularMedia = ( notas ) => {
 
     let soma = 0;
     for( c = 0; c < notas.length; c++) {
@@ -8,12 +8,11 @@ function calcularMedia( notas ) {
     media = soma / notas.length;
 
     return media;
-
 }
 
 let media; // escopo global
 
-function aprovacao( notas ) {
+const aprovacao = ( notas ) => {
 
     let media = calcularMedia( notas ); // escopo da função
 
@@ -26,7 +25,7 @@ function aprovacao( notas ) {
 
 // Função Recursivas
 
-function contagemRegressiva(numero){
+const contagemRegressiva = (numero) => {
 
     console.log(numero);  
     
@@ -77,7 +76,7 @@ if(formulario1)
     });
 
 
-function validaCampo(elemento){
+const validaCampo = (elemento) => {
 
     elemento.addEventListener('focusout', function(event) {
 
@@ -93,12 +92,11 @@ function validaCampo(elemento){
             this.classList.remove('erro');
             this.parentNode.classList.remove('erro');
         }
-
     });
 
 }
 
-function validaCampoNumerico(elemento){
+const validaCampoNumerico = (elemento) => {
 
     elemento.addEventListener('focusout', function(event) {
 
@@ -122,7 +120,7 @@ function validaCampoNumerico(elemento){
 }
 
 
-function validaEmail(elemento){
+const validaEmail = (elemento) => {
 
     elemento.addEventListener('focusout', function(event) {
 
