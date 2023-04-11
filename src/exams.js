@@ -11,7 +11,7 @@ let toPrint = ''
 
 // Lista meses
 filteredMonths.forEach(month => {
-   toPrint += month.month + ', '
+    toPrint += month.month + ', '
 });
 
 // for( let c = 0; c < filteredMonths.length; c++ ){

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+</head>
+
+<body>
+    <div id="cars"></div>
+
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <p>{{ message }}</p>
+        <button @click="toggleVisibility">Toggle Visibility</button>
+        <input type="text" v-model="inputValue">
+        <p v-if="isVisible">The element is visible!</p>
+        <p v-else>The element is hidden!</p>
+        <p v-bind:title="inputValue">Hover over me to see the title!</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                title: 'Welcome to Vue.js!',
+                message: 'Hello Vue.js!',
+                isVisible: true,
+                inputValue: ''
+            },
+            methods: {
+                toggleVisibility: function () {
+                    this.isVisible = !this.isVisible;
+                }
+            }
+        });
+    </script>
+
+    <script src="./carsFunctions.js" type="module"></script>
+</body>
+
+</html>
